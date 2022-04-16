@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorios Pirela</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+</head>
+<body>
+
+        <div id="encabezado">
+            <h1>Examenes de laboratorio</h1>
+            <h3>Este programa permite registrar los resultados de laboratorio obtenidos para un determinado examen y usuario, enviando ademas dichos resultados al correo del usuario en cuestion.</h3>
+        </div>
+
+        <hr>
+
+    <div id="contenido" class="row">
+
+    <form id="formDatos" onsubmit="return false;">
+        
+    <div id="datosUsuario" class="col s6">
+        
+        <h3>Datos de Usuario</h3>
+
+        <label for="usuarioCedula">Cedula del Usuario</label>
+        <input id="usuarioCedula" type="text" name="usuarioCedula"><br>
+        
+        <label for="usuarioNombre">Nombre del Usuario</label>
+        <input id="usuarioNombre" type="text" name="usuarioNombre"><br>
+        
+        <label for="usuarioEdad">Edad del Usuario</label>
+        <input id="usuarioEdad" type="number" name="usuarioEdad"><br>
+
+        <label for="usuarioMail">Correo del Usuario</label>
+        <input id="usuarioMail" type="email" name="usuarioMail"><br>
+            
+        
+        <button onclick="seleccionarFormulario('formSangre');">Examen de Sangre</button>
+        <button onclick="seleccionarFormulario('formOrina');">Examen de Orina</button>
+        <button onclick="seleccionarFormulario('formHeces');">Examen de Heces</button>
+        
+
+    </div>
+
+       <div id="divResultados" class="col s6">
+
+       </div>
+       
+    </form>
+
+</div>
+   
+<script type="text/javascript" src="js/materialize.min.js"></script>
+<script src="./controladores/eventos.js"></script>
+<script src="./controladores/eventosBack.js"></script>
+
+</body>
+</html>
